@@ -1,8 +1,13 @@
-import styled from "styled-components";
 import Header from "../components/Header";
+import ProjectList from "../components/ProjectList";
 
 const Home = () => {
-  return <Header />;
+  return (
+    <div>
+      <Header />
+      <ProjectList />
+    </div>
+  );
 };
 
 export default Home;
