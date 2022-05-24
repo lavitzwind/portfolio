@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import React, { useState, useEffect } from "react";
 
 const Container = styled.div`
   width: 100%;
   height: 4rem;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   position: fixed;
   top: 0;
   left: 0;
@@ -17,7 +18,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
+  padding: 0 4rem;
 `;
 
 const ItemRight = styled.div`
@@ -47,7 +48,7 @@ const ItemRight = styled.div`
         transition: all 0.1s ease-in;
 
         &:hover {
-          color: rgb(17 24 39 / 1);
+          color: rgb(255 255 255 / 1);
           border-bottom: 1px solid rgb(107 114 128 / 1);
           border-bottom-width: 4px;
         }
@@ -56,9 +57,30 @@ const ItemRight = styled.div`
   }
 `;
 
-const navbar = () => {
+const Navbar = () => {
+  const [navSize, setnavSize] = useState("10rem");
+  const [navColor, setnavColor] = useState("transparent");
+  const listenScrollEvent = () => {
+    window.scrollY > 500
+      ? setnavColor("rgba(0,0,0, 0.8)")
+      : setnavColor("transparent");
+    window.scrollY > 500 ? setnavSize("2rem") : setnavSize("4rem");
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+    return () => {
+      window.removeEventListener("scroll", listenScrollEvent);
+    };
+  }, []);
+
   return (
-    <Container>
+    <Container
+      style={{
+        backgroundColor: navColor,
+        padding: navSize,
+        transition: "all 0.7s",
+      }}
+    >
       <Wrapper>
         <ItemRight>
           <ul>
@@ -81,4 +103,4 @@ const navbar = () => {
   );
 };
 
-export default navbar;
+export default Navbar;

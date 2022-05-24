@@ -10,7 +10,6 @@ export const projects = [
     demo: "http://cool-weather-app.vercel.app/",
     github: "https://github.com/lavitzwind/cool-weather-app",
   },
-
   {
     _id: 2,
     title: "Cool Travel App: Voyageur",

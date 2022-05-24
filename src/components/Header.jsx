@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Navbar from "./navbar";
+import Navbar from "./Navbar";
 import TypeIt from "typeit-react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -102,9 +102,9 @@ const Header = () => {
               .pause(1500)
               .delete(26)
               .pause(200)
-              .type("designing REST API-based application.")
+              .type("designing REST API-based applications.")
               .pause(1500)
-              .delete(37)
+              .delete(38)
               .pause(200)
               .type("playing with APIs.")
               .pause(1500)
