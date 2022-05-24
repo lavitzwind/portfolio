@@ -9,7 +9,7 @@ const Container = styled.div`
   box-shadow: 0 2px 20px rgb(0 0 0 / 20%);
   overflow: hidden;
   width: 350px;
-  height: 500px;
+  height: 520px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -126,6 +126,7 @@ const CardBody = styled.div`
     font-size: 0.9rem;
     margin: 10px 0;
     color: #666;
+    line-height: 1.6;
   }
 
   button {

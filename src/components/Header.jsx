@@ -6,6 +6,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 
 const Container = styled.div`
+  position: relative;
   width: 100%;
   height: 100vh;
 `;
@@ -19,6 +20,7 @@ const HeaderVideo = styled.video`
   min-width: 100%;
   min-height: 100%;
   object-fit: cover;
+  object-position: center center;
   filter: brightness(0.5);
   z-index: -100;
 `;
@@ -41,11 +43,15 @@ const ContentWrapper = styled.div`
     margin: 0 0 2rem 0;
   }
 
+  hr {
+    width: 70%;
+  }
+
   p {
     z-index: 1;
     font-size: 2rem;
     text-shadow: 0.1rem 0.1rem 0.5rem black;
-    margin: 0 0 3rem 0;
+    margin: 2rem 0 3rem 0;
   }
 `;
 
@@ -76,12 +82,14 @@ const IconsContainer = styled.div`
 const Header = () => {
   return (
     <Container>
-      <HeaderVideo autoPlay loop muted>
+      <Navbar />
+      <HeaderVideo autoPlay loop muted playsInline>
         <source src="assets/headerBg.mp4" type="video/mp4" />
       </HeaderVideo>
       <ContentWrapper>
         <h1>Hello, I'm Leonardo.</h1>
-        <p>I'm a software developer and telecom engineer.</p>
+        <hr />
+        <p>I'm a web developer and telecom engineer.</p>
         <TypeIt
           element={`p`}
           style={{
@@ -139,7 +147,6 @@ const Header = () => {
           </a>
         </IconsContainer>
       </ContentWrapper>
-      <Navbar />
     </Container>
   );
 };

@@ -8,6 +8,8 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #fafafa;
+  width: 100%;
+  height: 100%;
 `;
 
 const Wrapper = styled.div`
@@ -18,6 +20,7 @@ const Wrapper = styled.div`
   justify-content: flex-start;
   align-items: center;
   padding: 5rem;
+  box-shadow: 0 2px 20px rgb(0 0 0 / 20%);
 
   h2 {
     font-size: 5rem;
@@ -40,7 +43,7 @@ const ProjectWrapper = styled.div`
 
 const Projects = () => {
   return (
-    <Container>
+    <Container id="projects">
       <Wrapper>
         <h2>Projects</h2>
         <ProjectWrapper>

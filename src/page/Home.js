@@ -1,3 +1,4 @@
+import About from "../components/About";
 import Header from "../components/Header";
 import ProjectList from "../components/ProjectList";
 
@@ -6,6 +7,7 @@ const Home = () => {
     <div>
       <Header />
       <ProjectList />
+      <About />
     </div>
   );
 };
