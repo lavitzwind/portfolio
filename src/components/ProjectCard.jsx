@@ -8,8 +8,8 @@ const Container = styled.div`
   border-radius: 10px;
   box-shadow: 0 2px 20px rgb(0 0 0 / 20%);
   overflow: hidden;
-  width: 300px;
-  height: 100%;
+  width: 350px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,10 +24,11 @@ const Container = styled.div`
 `;
 
 const CardBody = styled.div`
+  position: relative;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
   width: 100%;
@@ -122,8 +123,9 @@ const CardBody = styled.div`
   }
 
   p {
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin: 10px 0;
+    color: #666;
   }
 
   button {
@@ -161,6 +163,17 @@ const CardBody = styled.div`
   }
 `;
 
+const CenterBtn = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
 const ProjectCard = ({ project }) => {
   return (
     <Container>
@@ -173,16 +186,18 @@ const ProjectCard = ({ project }) => {
         </div>
         <h3>{project.title}</h3>
         <p>{project.description}</p>
-        <button>
-          <a href="/">
-            <AirplayIcon /> Demo
-          </a>
-        </button>
-        <button>
-          <a href="/">
-            <GitHubIcon /> Github Code
-          </a>
-        </button>
+        <CenterBtn>
+          <button>
+            <a href={project.demo} target="_blank" rel="noopener noreferrer">
+              <AirplayIcon /> Demo
+            </a>
+          </button>
+          <button>
+            <a href={project.github} target="_blank" rel="noopener noreferrer">
+              <GitHubIcon /> Github Code
+            </a>
+          </button>
+        </CenterBtn>
       </CardBody>
     </Container>
   );
