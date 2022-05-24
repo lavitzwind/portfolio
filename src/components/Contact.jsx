@@ -9,14 +9,12 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   background-color: rgb(20, 24, 33);
-  border-bottom: #000;
 `;
 
 const ContactWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   color: #fff;
-  border-bottom: 0.05rem solid #000;
 `;
 
 const Email = styled.div`
