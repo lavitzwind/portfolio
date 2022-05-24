@@ -9,6 +9,7 @@ const Container = styled.div`
   position: relative;
   width: 100%;
   height: 100vh;
+  box-shadow: 0 2px 20px rgb(0 0 0 / 55%);
 `;
 
 const HeaderVideo = styled.video`
@@ -134,7 +135,12 @@ const Header = () => {
           >
             <GitHubIcon />
           </a>
-          <a href="lol.com">
+          <a
+            href="https://www.linkedin.com/in/leojim/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Linkedin"
+          >
             <LinkedInIcon />
           </a>
           <a

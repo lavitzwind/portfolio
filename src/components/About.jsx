@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   padding: 5rem 15rem;
-  box-shadow: 0 2px 20px rgb(0 0 0 / 20%);
+  box-shadow: 0 2px 20px rgb(0 0 0 / 15%);
 
   h2 {
     display: flex;
@@ -43,7 +43,7 @@ const Wrapper = styled.div`
     line-height: 2;
 
     a {
-      color: green;
+      color: #0077b5;
       margin-left: 0.5rem;
     }
   }
@@ -71,7 +71,8 @@ const About = () => {
           your digital needs in whatever way I can.
         </p>
         <p>
-          If you need help or just wanna meet, <a href="">let's connect!</a>
+          If you need help or just wanna meet,
+          <a href="#contact">let's connect!</a>
         </p>
       </Wrapper>
     </Container>

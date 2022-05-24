@@ -94,7 +94,7 @@ const Navbar = () => {
               <a href="/#about">About</a>
             </li>
             <li>
-              <a href="/">Contact</a>
+              <a href="/#contact">Contact</a>
             </li>
           </ul>
         </ItemRight>
