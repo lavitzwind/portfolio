@@ -10,6 +10,7 @@ const Container = styled.div`
   left: 0;
   z-index: 100;
   padding: 4rem 0;
+  overflow: hidden;
 `;
 
 const Wrapper = styled.div`

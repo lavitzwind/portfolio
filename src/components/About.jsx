@@ -6,6 +6,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: flex-start;
   background-color: rgb(20, 24, 33);
+  overflow: hidden;
 `;
 
 const Wrapper = styled.div`

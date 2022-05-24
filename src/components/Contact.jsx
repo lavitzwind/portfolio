@@ -9,6 +9,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   background-color: rgb(20, 24, 33);
+  overflow: hidden;
 `;
 
 const ContactWrapper = styled.div`

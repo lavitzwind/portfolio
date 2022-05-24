@@ -6,6 +6,7 @@ const Container = styled.div`
   align-items: center;
   width: 100%;
   background-color: rgb(20, 24, 33);
+  overflow: hidden;
 `;
 
 const Wrapper = styled.div`

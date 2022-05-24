@@ -10,6 +10,7 @@ const Container = styled.div`
   width: 100%;
   height: 100vh;
   box-shadow: 0 2px 20px rgb(0 0 0 / 55%);
+  overflow: hidden;
 `;
 
 const HeaderVideo = styled.video`
