@@ -8,20 +8,19 @@ import MailOutlineIcon from "@mui/icons-material/MailOutline";
 const Container = styled.div`
   width: 100%;
   height: 100vh;
-  background-color: #fff;
 `;
 
 const HeaderVideo = styled.video`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  width: 100%;
-  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
   object-fit: cover;
   filter: brightness(0.5);
-  z-index: 0;
+  z-index: -100;
 `;
 
 const ContentWrapper = styled.div`

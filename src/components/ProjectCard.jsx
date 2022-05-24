@@ -167,11 +167,9 @@ const ProjectCard = ({ project }) => {
       <img src={project.image} alt="" />
       <CardBody>
         <div>
-          <span>react</span>
-          <span>nodejs</span>
-          <span>express</span>
-          <span>mongodb</span>
-          <span>nextjs</span>
+          {project.technologies.map((tech, index) => {
+            return <span key={index}>{tech}</span>;
+          })}
         </div>
         <h3>{project.title}</h3>
         <p>{project.description}</p>
