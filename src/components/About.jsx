@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { desktop, tablet, mobile } from "../responsive";
 
 const Container = styled.div`
   display: flex;
@@ -18,6 +19,15 @@ const Wrapper = styled.div`
   align-items: flex-start;
   padding: 5rem 15rem;
   box-shadow: 0 2px 20px rgb(0 0 0 / 15%);
+  ${desktop(`
+    padding: 5rem 4rem;
+  `)}
+  ${tablet(`
+    padding: 5rem 2.5rem;
+  `)}
+  ${mobile(`
+    padding: 5rem 1rem;
+  `)}
 
   h2 {
     display: flex;
@@ -27,25 +37,42 @@ const Wrapper = styled.div`
     font-weight: bold;
     margin-bottom: 0.5rem;
     color: #fff;
+    ${tablet(`
+      font-size: 3.5rem;
+    `)}
   }
 
   hr {
-    width: 20%;
+    width: 25%;
+    border: 0.1rem solid #fff;
+    margin-bottom: 1rem;
+    ${desktop(`
+      width: 30%;
+    `)}
+    ${tablet(`
+      width: 40%;
+    `)}
   }
 
   p {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
     font-size: 1.3rem;
     margin-top: 1.5rem;
     color: #fff;
     width: 80%;
     line-height: 2;
+    ${desktop(`
+      width: 100%;
+  `)}
+    ${tablet(`
+      font-size: 1rem;
+    `)}
+    ${mobile(`
+      font-size: 0.85rem;
+    `)}
 
     a {
       color: #0077b5;
-      margin-left: 0.5rem;
+      margin-left: 0.3rem;
     }
   }
 `;

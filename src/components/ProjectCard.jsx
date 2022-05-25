@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import AirplayIcon from "@mui/icons-material/Airplay";
+import { desktop, tablet } from "../responsive";
 
 const Container = styled.div`
   margin: 20px;
@@ -9,11 +10,17 @@ const Container = styled.div`
   box-shadow: 0 2px 20px rgb(0 0 0 / 20%);
   overflow: hidden;
   width: 350px;
-  height: 520px;
+  height: 550px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
+  ${desktop(`
+    width: 320px;
+  `)}
+  ${tablet(`
+    width: 320px;
+  `)}
 
   img {
     width: 100%;
@@ -26,7 +33,7 @@ const Container = styled.div`
 
 const CardBody = styled.div`
   position: relative;
-  padding: 20px;
+  padding: 1.2rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -34,6 +41,13 @@ const CardBody = styled.div`
   flex-wrap: wrap;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  ${desktop(`
+    padding: 1rem;
+  `)}
+  ${tablet(`
+    padding: 1rem;
+  `)}
 
   div {
     display: flex;
@@ -41,7 +55,7 @@ const CardBody = styled.div`
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-    margin: 0 0 15px 0;
+    margin: 0 0 25px 0;
   }
 
   span:nth-child(1) {
@@ -108,7 +122,7 @@ const CardBody = styled.div`
     background: var(--nextjs);
     border-radius: 50px;
     font-size: 12px;
-    margin: 0 0 0 5px;
+    margin: 0 0 -20px 5px;
     color: #fff;
     padding: 2px 10px;
     text-transform: uppercase;
@@ -121,9 +135,17 @@ const CardBody = styled.div`
 
   h3 {
     font-size: 1.5rem;
+    ${tablet(`
+      font-size: 1.3rem;
+    `)}
   }
 
   p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     font-size: 0.9rem;
     margin: 10px 0;
     color: #666;

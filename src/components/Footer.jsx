@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { tablet, mobile } from "../responsive";
 
 const Container = styled.div`
   display: flex;
@@ -23,6 +24,13 @@ const Wrapper = styled.div`
   span {
     font-size: 0.8rem;
     letter-spacing: 0.065em;
+    text-align: center;
+    ${tablet(`
+      font-size: 0.7rem;
+    `)}
+    ${mobile(`
+      font-size: 0.52rem;
+    `)}
   }
 `;
 

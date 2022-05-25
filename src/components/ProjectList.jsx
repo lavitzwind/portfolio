@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import ProjectCard from "./ProjectCard";
 import { projects } from "../projects";
+import { desktop, tablet } from "../responsive";
 
 const Container = styled.div`
   display: flex;
@@ -22,11 +23,23 @@ const Wrapper = styled.div`
   align-items: center;
   padding: 5rem;
   box-shadow: 0 2px 20px rgb(0 0 0 / 20%);
+  ${desktop(`
+    padding: 0.5rem;
+  `)}
+  ${tablet(`
+    padding: 3rem 0.1rem;
+  `)}
 
   h2 {
     font-size: 5rem;
     font-weight: bold;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
+    text-shadow: 0.1rem 0.1rem 0.1rem black;
+    ${tablet(`
+      font-size: 4rem;
+      margin-bottom: 3rem;
+      text-align: center;
+    `)}
   }
 `;
 

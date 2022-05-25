@@ -4,6 +4,8 @@ import TypeIt from "typeit-react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import { desktop, tablet } from "../responsive";
+import { useMediaQuery } from "react-responsive";
 
 const Container = styled.div`
   position: relative;
@@ -23,6 +25,7 @@ const HeaderVideo = styled.video`
   min-height: 100%;
   object-fit: cover;
   object-position: center center;
+  background: no-repeat;
   filter: brightness(0.5);
   z-index: -100;
 `;
@@ -37,16 +40,34 @@ const ContentWrapper = styled.div`
   color: #fff;
   padding: 10% 15% 15% 10%;
 
+  ${tablet(`
+    padding: 10% 3% 15% 3%;
+    align-items: center;
+  `)}
+
   h1 {
     z-index: 1;
     font-size: 4.5rem;
     text-shadow: rgb(255 255 255 / 25%) 0px 5px 35px;
     letter-spacing: 0.025em;
     margin: 0 0 2rem 0;
+    ${tablet(`
+      font-size: 3rem;
+      text-align: center;
+  `)}
   }
 
   hr {
     width: 70%;
+    border: 0.1rem solid #fff;
+    margin: 0 0 1rem 0;
+
+    ${desktop(`
+      width: 100%;
+  `)}
+    ${tablet(`
+      width: 90%;
+    `)}
   }
 
   p {
@@ -54,6 +75,10 @@ const ContentWrapper = styled.div`
     font-size: 2rem;
     text-shadow: 0.1rem 0.1rem 0.5rem black;
     margin: 2rem 0 3rem 0;
+    ${tablet(`
+      font-size: 1.3rem;
+      text-align: center;
+  `)}
   }
 `;
 
@@ -65,6 +90,14 @@ const IconsContainer = styled.div`
   text-align: center;
   width: 70%;
   margin: 0 auto;
+  ${desktop(`
+    width: 40%;
+  `)}
+  ${tablet(`
+    width: 100%;
+    justify-content: center;
+  align-items: center;
+  `)}
 
   a {
     z-index: 1;
@@ -73,15 +106,22 @@ const IconsContainer = styled.div`
     text-decoration: none;
     transition: all 0.2s ease-in-out;
     transform: scale(1.3);
+    ${tablet(`
+      transform: scale(1.1);
+      `)}
 
     &:hover {
       color: #bbb;
       transform: scale(1.4);
+      ${tablet(`
+        transform: scale(1.2);
+      `)}
     }
   }
 `;
 
 const Header = () => {
+  const isTablet = useMediaQuery({ query: "(max-width: 769px)" });
   return (
     <Container>
       <Navbar />
@@ -92,41 +132,79 @@ const Header = () => {
         <h1>Hello, I'm Leonardo.</h1>
         <hr />
         <p>I'm a web developer and telecom engineer.</p>
-        <TypeIt
-          element={`p`}
-          style={{
-            zIndex: 1,
-            fontSize: "1.5rem",
-            textShadow: "0.1rem 0.1rem 0.5rem black",
-            margin: "0 0 3rem 0",
-          }}
-          options={{
-            speed: 100,
-            nextStringDelay: 750,
-            waitUntilVisible: true,
-            startDelete: true,
-            loop: true,
-          }}
-          getBeforeInit={(instance) => {
-            instance
-              .pause(1500)
-              .delete(26)
-              .pause(200)
-              .type("designing REST API-based applications.")
-              .pause(1500)
-              .delete(38)
-              .pause(200)
-              .type("playing with APIs.")
-              .pause(1500)
-              .delete(18)
-              .pause(200)
-              .type("building great products for society.");
-            // Remember to return it!
-            return instance;
-          }}
-        >
-          I love building web applications.
-        </TypeIt>
+
+        {isTablet ? (
+          <TypeIt
+            style={{
+              zIndex: 1,
+              fontSize: "1rem",
+              textShadow: "0.1rem 0.1rem 0.5rem black",
+              margin: "0 0 3rem 0",
+            }}
+            options={{
+              speed: 100,
+              nextStringDelay: 750,
+              waitUntilVisible: true,
+              startDelete: true,
+              loop: true,
+            }}
+            getBeforeInit={(instance) => {
+              instance
+                .pause(1500)
+                .delete(26)
+                .pause(200)
+                .type("designing REST API-based applications.")
+                .pause(1500)
+                .delete(38)
+                .pause(200)
+                .type("playing with APIs.")
+                .pause(1500)
+                .delete(18)
+                .pause(200)
+                .type("building great products for society.");
+              // Remember to return it!
+              return instance;
+            }}
+          >
+            I love building web applications.
+          </TypeIt>
+        ) : (
+          <TypeIt
+            style={{
+              zIndex: 1,
+              fontSize: "1.5rem",
+              textShadow: "0.1rem 0.1rem 0.5rem black",
+              margin: "0 0 3rem 0",
+            }}
+            options={{
+              speed: 100,
+              nextStringDelay: 750,
+              waitUntilVisible: true,
+              startDelete: true,
+              loop: true,
+            }}
+            getBeforeInit={(instance) => {
+              instance
+                .pause(1500)
+                .delete(26)
+                .pause(200)
+                .type("designing REST API-based applications.")
+                .pause(1500)
+                .delete(38)
+                .pause(200)
+                .type("playing with APIs.")
+                .pause(1500)
+                .delete(18)
+                .pause(200)
+                .type("building great products for society.");
+              // Remember to return it!
+              return instance;
+            }}
+          >
+            I love building web applications.
+          </TypeIt>
+        )}
+
         <IconsContainer>
           <a
             href="https://github.com/lavitzwind"
