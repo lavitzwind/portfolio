@@ -26,7 +26,7 @@ const Wrapper = styled.div`
     padding: 5rem 2.5rem;
   `)}
   ${mobile(`
-    padding: 5rem 1rem 2rem 0;
+    padding: 5rem 1rem 2rem 1rem;
   `)}
 
   h2 {
