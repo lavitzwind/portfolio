@@ -28,6 +28,12 @@ const Container = styled.div`
     object-fit: cover;
     object-position: center;
     border-style: none;
+    filter: brightness(1);
+
+    &:hover {
+      cursor: pointer;
+      filter: brightness(1.15);
+    }
   }
 `;
 
