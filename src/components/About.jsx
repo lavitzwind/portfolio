@@ -99,8 +99,10 @@ const About = () => {
           your digital needs in whatever way I can.
         </p>
         <p>
-          If you need help or just wanna meet,
-          <a href="#contact">let's connect!</a>
+          Want to know more about me? Have a look on my
+          <a href="assets/CV_LeonardoJimenez.docx" download>
+            RESUME!
+          </a>
         </p>
       </Wrapper>
     </Container>
