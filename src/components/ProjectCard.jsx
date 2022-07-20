@@ -207,7 +207,9 @@ const CenterBtn = styled.div`
 const ProjectCard = ({ project }) => {
   return (
     <Container>
-      <img src={project.image} alt="" />
+      <a href={project.demo}>
+        <img src={project.image} alt="" />
+      </a>
       <CardBody>
         <div>
           {project.technologies.map((tech, index) => {
