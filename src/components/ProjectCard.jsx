@@ -207,7 +207,7 @@ const CenterBtn = styled.div`
 const ProjectCard = ({ project }) => {
   return (
     <Container>
-      <a href={project.demo}>
+      <a href={project.demo} target="_blank" rel="noopener noreferrer">
         <img src={project.image} alt="" />
       </a>
       <CardBody>

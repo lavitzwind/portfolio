@@ -14,7 +14,7 @@ export const projects = [
     title: "Cool Travel App: Voyageur",
     technologies: ["React", "Node", "Express", "MongoDB"],
     description:
-      "Voyageur app is a travel app that allows users to pin locations and share your travel experiences with other users. It uses the mapbox API to retrieve the map data. Voyageur app includes a Node.js backend that uses MongoDB to store the user data.",
+      "Voyageur app is a travel app that allows users to pin locations and share their travel experiences with other users. It uses the Mapbox API to retrieve the map data. Voyageur app includes a Node.js backend that uses MongoDB to store user data.",
     image: "assets/mini-map.png",
     demo: "http://cool-travel-app-voyageur.vercel.app/",
     github: "https://github.com/lavitzwind/cool-travel-app-voyageur",
