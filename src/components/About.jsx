@@ -100,7 +100,7 @@ const About = () => {
         </p>
         <p>
           Want to know more about me? Have a look on my
-          <a href="assets/CV_LeonardoJimenez.docx" download>
+          <a href="assets/CV_LeonardoJimenez.pdf" download>
             RESUME!
           </a>
         </p>
