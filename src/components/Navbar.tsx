@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { desktop, tablet, mobile } from "../responsive";
 
 const Container = styled.div`

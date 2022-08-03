@@ -2,6 +2,7 @@ import styled from "styled-components";
 import ProjectCard from "./ProjectCard";
 import { projects } from "../projects";
 import { desktop, tablet } from "../responsive";
+import { Project } from "../types/project";
 
 const Container = styled.div`
   display: flex;
@@ -61,7 +62,7 @@ const Projects = () => {
       <Wrapper>
         <h2>Projects</h2>
         <ProjectWrapper>
-          {projects.map((project) => {
+          {projects.map((project: Project) => {
             return <ProjectCard project={project} key={project._id} />;
           })}
         </ProjectWrapper>

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import AirplayIcon from "@mui/icons-material/Airplay";
 import { desktop, tablet } from "../responsive";
+import { ProjectCardProps } from "../types/projectCardProps";
 
 const Container = styled.div`
   margin: 20px;
@@ -204,7 +205,7 @@ const CenterBtn = styled.div`
   align-items: center;
 `;
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
     <Container>
       <a href={project.demo} target="_blank" rel="noopener noreferrer">

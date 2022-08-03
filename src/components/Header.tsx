@@ -135,6 +135,7 @@ const Header = () => {
 
         {isTablet ? (
           <TypeIt
+            // @ts-ignore
             style={{
               zIndex: 1,
               fontSize: "1rem",
@@ -170,6 +171,7 @@ const Header = () => {
           </TypeIt>
         ) : (
           <TypeIt
+            // @ts-ignore
             style={{
               zIndex: 1,
               fontSize: "1.5rem",
