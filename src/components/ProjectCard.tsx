@@ -2,7 +2,7 @@ import styled from "styled-components";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import AirplayIcon from "@mui/icons-material/Airplay";
 import { desktop, tablet } from "../responsive";
-import { ProjectCardProps } from "../types/projectCardProps";
+import { ProjectCardProps } from "../interfaces/projectCardProps";
 
 const Container = styled.div`
   margin: 20px;

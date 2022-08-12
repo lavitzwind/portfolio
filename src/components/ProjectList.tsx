@@ -2,7 +2,7 @@ import styled from "styled-components";
 import ProjectCard from "./ProjectCard";
 import { projects } from "../projects";
 import { desktop, tablet } from "../responsive";
-import { Project } from "../types/project";
+import { Project } from "../interfaces/project";
 
 const Container = styled.div`
   display: flex;
