@@ -34,7 +34,7 @@ export const projects = [
     title: "Ninja Maki",
     technologies: ["React", "Node", "Express", "MongoDB", "NextJS"],
     description:
-      "Ninja Maki is a food ordering app that allows users to order food from a list of available options and save their orders to a MongoDB database. Ninja Maki also features a Node.js backend server.",
+      "Ninja Maki is a food ordering app that allows users to order food from a list of available options and save their orders to a MongoDB database. Ninja Maki also features a Next.js server-side rendering.",
     image: "assets/mini-maki.png",
     demo: "https://ninja-maki-nextjs.vercel.app/",
     github: "https://github.com/lavitzwind/ninja-maki-nextjs",
